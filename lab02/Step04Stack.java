@@ -59,6 +59,7 @@ public class Step04Stack {
         stack.printStack();
 
         System.out.println("Popped: " + stack.pop());
+        stack.push(44);
         stack.printStack();
         System.out.println("Popped: " + stack.pop());
         stack.printStack();
