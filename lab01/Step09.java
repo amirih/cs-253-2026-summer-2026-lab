@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Step09 {
-    // Step 09: exceptions and collections
+    // Step 09: exceptions and error handling
 
     static class GradeBook {
         private final Map<String, Integer> grades = new HashMap<>();

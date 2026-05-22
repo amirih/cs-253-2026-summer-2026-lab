@@ -46,7 +46,6 @@ public class Step08 {
         list.add("Java");
         Printer.printList(list);
 
-        //
         List<Integer> numbers = new ArrayList<>();
         numbers.add(10);
         numbers.add(20);

@@ -19,7 +19,7 @@ public class Step10 {
         List<T> findAll();
     }
 
-    static class InMemoryRepository<T extends Identifiable> implements Repository<T> {
+    static class MyRepository<T extends Identifiable> implements Repository<T> {
         private final List<T> items = new ArrayList<>();
 
         @Override
@@ -110,7 +110,7 @@ public class Step10 {
     }
 
     public static void main(String[] args) {
-        Repository<User> repo = new InMemoryRepository<>();
+        Repository<User> repo = new MyRepository<>();
         UserService service = new UserService(repo);
 
         service.register(new Student(1, "Ava"));
