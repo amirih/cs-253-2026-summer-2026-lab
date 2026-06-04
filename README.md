@@ -11,8 +11,8 @@ Clone the repository to your local machine and run `Main.java` to make sure ever
 
 I should have renamed lab1 to lab0. But I keep the names as are.
 
-- Week 1: (Lab1, Lab2)
-- Week 2: (Lab 3)
-- Week 3: (Lab 4)
-- Week 4: (Lab 5)
-- Week 5: (Lab 6)
+- Week 1: (lab01, lab02)
+- Week 2: (lab03)
+- Week 3: (lab04)
+- Week 4: (lab05)
+- Week 5: (lab06)
