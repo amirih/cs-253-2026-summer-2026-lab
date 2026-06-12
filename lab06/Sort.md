@@ -35,7 +35,9 @@ Compare `9` and `1`, swap:
 Now `9` is in the correct final position.
 
 **Good for:** Small lists
+
 **Bad for:** Large lists
+
 **Time:** `O(n²)`
 
 ## Insertion sort
@@ -65,8 +67,11 @@ Insert `1` at the front:
 `[1, 2, 5, 9]`
 
 **Good for:** Small lists or nearly sorted lists
+
 **Bad for:** Large random lists
+
 **Time:** `O(n²)`, but fast when nearly sorted
+
 
 ## Selection sort
 
@@ -89,8 +94,11 @@ Next smallest is `5`, swap with `9`:
 `[1, 2, 5, 9]`
 
 **Good for:** Simple explanation
+
 **Bad for:** Large lists
+
 **Time:** `O(n²)`
+
 
 ## Merge sort
 
@@ -117,8 +125,11 @@ Merge again:
 `[1, 2, 5, 9]`
 
 **Good for:** Reliable sorting
+
 **Bad for:** Needs extra memory
+
 **Time:** `O(n log n)`
+
 
 ## Quick sort
 
@@ -149,9 +160,13 @@ Final:
 `[1, 2, 5, 6, 9]`
 
 **Good for:** Fast general-purpose sorting
+
 **Bad for:** Can be slow if pivots are chosen badly
+
 **Average time:** `O(n log n)`
+
 **Worst time:** `O(n²)`
+
 
 ## Heap sort
 
@@ -176,8 +191,11 @@ Final sorted order:
 `[1, 2, 5, 6, 9]`
 
 **Good for:** Guaranteed good speed, no much extra memory
+
 **Bad for:** Often less simple and less cache-friendly than quick sort
+
 **Time:** `O(n log n)`
+
 
 ## Counting sort
 
@@ -192,8 +210,11 @@ Example:
 Counts:
 
 `1 appears 1 time`
+
 `2 appears 2 times`
+
 `3 appears 0 times`
+
 `4 appears 2 times`
 
 Rebuild:
@@ -201,8 +222,11 @@ Rebuild:
 `[1, 2, 2, 4, 4]`
 
 **Good for:** Small integer ranges
+
 **Bad for:** Large ranges like 1 to 1 billion
+
 **Time:** `O(n + k)`, where `k` is the value range
+
 
 ## Bucket sort
 
@@ -245,9 +269,13 @@ Join buckets:
 `[0.12, 0.17, 0.21, 0.23, 0.26, 0.39, 0.68, 0.72, 0.78, 0.94]`
 
 **Good for:** Evenly distributed numbers
+
 **Bad for:** Data that all falls into one bucket
+
 **Average time:** `O(n + k)`
+
 **Worst time:** `O(n²)` if buckets are badly balanced
+
 
 ## Radix sort with intermediate results
 
@@ -301,6 +329,21 @@ Using the intermediate result above:
 Final result:
 
 `[2, 24, 45, 66, 75, 90, 170, 802]`
+
+**Good for:** Integers, strings, fixed-length keys
+
+**Bad for:** More complicated, depends on digit/base representation
+
+**Time:** `O(d × (n + k))`
+
+
+
+Where:
+
+
+`d = number of digits`
+
+`k = digit range, such as 10 for decimal digits`
 
 ## Summary
 
