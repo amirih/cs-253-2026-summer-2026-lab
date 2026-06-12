@@ -18,8 +18,16 @@ public class Step06QuickSort {
             return;
 
         int pivotIndex = partition(arr, low, high);
+        System.out.println(Arrays.toString(getArraySlice(arr, low, high)));
+        System.out.println("Pivot: " + arr[pivotIndex]);
         quickSort(arr, low, pivotIndex - 1);
         quickSort(arr, pivotIndex + 1, high);
+    }
+
+    private static int[] getArraySlice(int[] arr, int low, int high) {
+        int[] slice = new int[high - low + 1];
+        System.arraycopy(arr, low, slice, 0, slice.length);
+        return slice;
     }
 
     private static int partition(int[] arr, int low, int high) {

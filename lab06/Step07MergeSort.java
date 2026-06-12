@@ -19,16 +19,26 @@ public class Step07MergeSort {
         if (left >= right)
             return;
 
+        System.out.println(Arrays.toString(getArraySlice(arr, left, right)));
+
         int mid = left + (right - left) / 2;
         mergeSort(arr, temp, left, mid);
         mergeSort(arr, temp, mid + 1, right);
         merge(arr, temp, left, mid, right);
     }
 
+    private static int[] getArraySlice(int[] arr, int low, int high) {
+        int[] slice = new int[high - low + 1];
+        System.arraycopy(arr, low, slice, 0, slice.length);
+        return slice;
+    }
+
     private static void merge(int[] arr, int[] temp, int left, int mid, int right) {
         int i = left;
         int j = mid + 1;
         int k = left;
+        System.out.println("Merging: " + Arrays.toString(getArraySlice(arr, left, mid)) + " and "
+                + Arrays.toString(getArraySlice(arr, mid + 1, right)));
 
         while (i <= mid && j <= right) {
             if (arr[i] <= arr[j])
@@ -44,6 +54,8 @@ public class Step07MergeSort {
         for (int index = left; index <= right; index++) {
             arr[index] = temp[index];
         }
+
+        System.out.println("Merged: " + Arrays.toString(getArraySlice(arr, left, right)));
     }
 
     public static void main(String[] args) {

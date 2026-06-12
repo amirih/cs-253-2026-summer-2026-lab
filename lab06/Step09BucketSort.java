@@ -22,13 +22,19 @@ public class Step09BucketSort {
             max = Math.max(max, value);
         }
 
+        System.out.println("Min: " + min + ", Max: " + max);
+
         int bucketCount = (int) Math.sqrt(arr.length) + 1;
         int bucketSize = Math.max(1, (max - min) / bucketCount + 1);
+
+        System.out.println("Bucket count: " + bucketCount + ", Bucket size: " + bucketSize);
 
         List<List<Integer>> buckets = new ArrayList<>();
         for (int i = 0; i < bucketCount; i++) {
             buckets.add(new ArrayList<>());
         }
+
+        System.out.println("Buckets: " + buckets);
 
         for (int value : arr) {
             int bucketIndex = (value - min) / bucketSize;
@@ -37,17 +43,23 @@ public class Step09BucketSort {
             buckets.get(bucketIndex).add(value);
         }
 
+        System.out.println("Buckets: " + buckets);
+
         int index = 0;
         for (List<Integer> bucket : buckets) {
             Collections.sort(bucket); // You can replace this with insertion sort for practice.
             for (int value : bucket) {
                 arr[index++] = value;
             }
+            System.out.println("Buckets: " + buckets);
+            System.out.println("Array after gathering: " + Arrays.toString(arr));
         }
+
     }
 
     public static void main(String[] args) {
         int[] data = { 15, 5, 2, 9, 8, 4, 22 };
+
         bucketSort(data);
         System.out.println(Arrays.toString(data));
     }

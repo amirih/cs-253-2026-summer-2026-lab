@@ -237,7 +237,7 @@ public class AVL extends BST {
     public static void main(String[] args) {
         Tree tree = new Tree();
 
-        tree.setDelay(100);
+        tree.setDelay(1000);
 
         tree.insert(5);
         tree.insert(6);

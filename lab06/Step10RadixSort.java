@@ -21,7 +21,10 @@ public class Step10RadixSort {
             max = Math.max(max, value);
         }
 
+        System.out.println("Max value: " + max);
+
         for (int place = 1; max / place > 0; place *= 10) {
+            System.out.println("Sorting by place: " + place);
             countingSortByDigit(arr, place);
         }
     }
@@ -32,6 +35,7 @@ public class Step10RadixSort {
 
         for (int value : arr) {
             int digit = (value / place) % 10;
+            System.out.println("Value: " + value + ", Digit: " + digit);
             count[digit]++;
         }
 
@@ -41,6 +45,7 @@ public class Step10RadixSort {
 
         for (int i = arr.length - 1; i >= 0; i--) {
             int digit = (arr[i] / place) % 10;
+            System.out.println("Placing value: " + arr[i] + ", Digit: " + digit);
             output[count[digit] - 1] = arr[i];
             count[digit]--;
         }
@@ -50,6 +55,7 @@ public class Step10RadixSort {
 
     public static void main(String[] args) {
         int[] data = { 217, 228, 163, 152, 65, 72, 67 };
+        System.out.println(Arrays.toString(data));
         radixSort(data);
         System.out.println(Arrays.toString(data));
     }
