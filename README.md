@@ -14,5 +14,5 @@ I should have renamed lab01 to lab0. But I keep the names as are.
 - Week 1: (lab01, lab02)
 - Week 2: (lab03)
 - Week 3: (lab04)
-- Week 4: (lab05)
-- Week 5: (lab06)
+- Week 4: (lab05, lab06)
+- Week 5: (lab07)
